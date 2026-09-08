@@ -1,0 +1,7 @@
+interface:
+  display_name: "GMU 作业助手"
+  short_description: "打开泛雅作业、写高质量答案并暂时保存"
+  default_prompt: "Use $gmu-elearn-assignment-assistant to open 广州医科大学 e学中心, locate 《课程名》里的未交作业, independently read the assignment and write a very high-quality Chinese answer yourself, fill the editor, click `暂时保存`, have a subagent explicitly using gpt-6-astra independently review the saved answer, improve and re-save if needed, confirm the revised version with that subagent, and stop before final submission."
+
+policy:
+  allow_implicit_invocation: true

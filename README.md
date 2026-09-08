@@ -6,12 +6,12 @@
 
 把时间拿回去，学你自己认为值得学的东西。
 
-当前版本面向广州医科大学 e 学中心／超星泛雅平台，以 Codex skill 的形式运行。主代理负责操作网页和暂存，子代理负责复核，最后由你检查并提交。
+面向使用超星学习通／泛雅平台的大学生，以 Codex skill 的形式运行。默认从 [i.chaoxing.com](https://i.chaoxing.com) 进入，未登录时会跳转到学习通登录页面。主代理负责操作网页和暂存，子代理负责复核，最后由你检查并提交。
 
 ## 工作流
 
-1. 打开 Chrome，进入广医 e 学中心，使用浏览器已保存的账号登录。
-2. 找到指定课程与作业；未指定作业名时，打开第一个未交／未完成作业。
+1. 打开 Chrome，访问 [https://i.chaoxing.com](https://i.chaoxing.com)，在跳转后的学习通登录页面使用浏览器已保存的账号登录；已登录时直接继续。
+2. 按实际页面进入“课程”“我的课程”等课程列表，找到指定课程与作业；未指定作业名时，打开第一个未交／未完成作业。
 3. 阅读题目、病例、表格、图片、附件和老师要求，逐问作答并自查。
 4. 填入答题框。遇到“不可粘贴，只可录入”时，使用 JavaScript 写入编辑器，同步数据并核对全文。
 5. 点击“暂时保存”，确认保存成功。
@@ -26,13 +26,13 @@
 调用示例：
 
 ```text
-@use computer 用 gmu-elearn-assignment-assistant 帮我处理《公共卫生应急》的未完成作业。
+@use computer 用 gmu-elearn-assignment-assistant 帮我处理学习通里《课程名》的未完成作业。
 ```
 
 也可以指定作业名称：
 
 ```text
-@use computer 用 gmu-elearn-assignment-assistant 打开《卫生法学》的《作业名称》，完成答案并暂时保存。
+@use computer 用 gmu-elearn-assignment-assistant 打开《课程名》的《作业名称》，完成答案并暂时保存。
 ```
 
 ## 运行条件
@@ -40,7 +40,7 @@
 - Codex 环境支持 Computer Use 浏览器操作，以及可指定模型的子代理工具。
 - 复核模型必须为 `gpt-6-astra`；不可用时报告复核未完成，不自动换模型。
 - 遇到粘贴限制时，需要当前环境提供页面 JavaScript 执行能力。
-- Chrome 中能够访问广医 e 学中心；验证码、短信或扫码验证由你完成。
+- Chrome 中能够访问 [i.chaoxing.com](https://i.chaoxing.com)，并登录你自己的学习通账号；验证码、短信或扫码验证由你完成。
 
 ## 保留规则
 
